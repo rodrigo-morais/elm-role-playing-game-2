@@ -1,0 +1,29 @@
+{
+  "name": "elm-role-playing-game-2",
+  "version": "0.0.1",
+  "description": "The Role Playing Game in Elm, but with a better architecture.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://rodrigo-morais@github.com/rodrigo-morais/elm-role-playing-game-2.git"
+  },
+  "keywords": [
+    "Elm",
+    "Architecture",
+    "Role",
+    "Playing",
+    "Game"
+  ],
+  "author": "Rodrigo Morais <morais.rm@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rodrigo-morais/elm-role-playing-game-2/issues"
+  },
+  "homepage": "https://github.com/rodrigo-morais/elm-role-playing-game-2#readme",
+  "dependencies": {
+    "json-server": "^0.8.9"
+  }
+}
