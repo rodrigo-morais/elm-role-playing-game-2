@@ -1,4 +1,4 @@
-module Players.Edit.Models (..) where
+module Players.Models (..) where
 
 
 type alias PlayerId =

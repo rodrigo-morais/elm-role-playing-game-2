@@ -1,9 +1,11 @@
 module Players.Search.Models (..) where
 
 
+import Players.Models exposing (Player)
+
 type alias Players =
-  Int
+  List Player
 
 
-initialPlayers : Players
-initialPlayers = 1
+initialPlayers : List Player
+initialPlayers = [ ]

@@ -6,7 +6,9 @@ import Html.Attributes exposing (class, value, href)
 
 
 import Players.Edit.Actions exposing (Action)
-import Players.Edit.Models exposing (Player)
+
+
+import Players.Models exposing (Player)
 
 
 view : Signal.Address Action -> Player -> Html.Html
