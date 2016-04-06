@@ -12,19 +12,25 @@ import Players.Edit.Update exposing (update)
 import Players.Edit.Actions exposing (Action)
 
 
+import Players.Search.Search exposing (view)
+import Players.Search.Models exposing (Players, initialPlayers)
+import Players.Search.Update exposing (update)
+import Players.Search.Actions exposing (Action)
+
+
 -- START APP
 
-init : ( Player, Effects Action )
+init : ( Players, Effects Players.Search.Actions.Action )
 init =
-  ( initialPlayer, Effects.none )
+  ( initialPlayers, Effects.none )
 
-app : StartApp.App Player
+app : StartApp.App Players
 app =
   StartApp.start
     { init = init
     , inputs = []
-    , update = update
-    , view = view
+    , update = Players.Search.Update.update
+    , view = Players.Search.Search.view
     }
 
 main : Signal.Signal Html
