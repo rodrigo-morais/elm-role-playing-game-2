@@ -1,8 +1,22 @@
 module Players.Edit.Models (..) where
 
 
-type alias Player = Int
+type alias PlayerId =
+  Int
+
+
+type alias Player =
+  {
+    id : PlayerId,
+    name : String,
+    level : Int
+  }
+
 
 initialPlayer : Player
 initialPlayer =
-  0
+  {
+    id = 0,
+    name = "",
+    level = 1
+  }
