@@ -6,24 +6,36 @@ import Task
 import StartApp
 
 
-import Players.Search.Search exposing (view)
-import Players.Search.Models exposing (Players, initialPlayers)
-import Players.Search.Update exposing (update)
-import Players.Search.Actions exposing (Action)
-import Players.Search.Effects exposing (..)
+import Router.Routing exposing (..)
+
+
+import Actions exposing (..)
+import Models exposing (..)
+import View exposing (..)
+import Update exposing (..)
+
+
+-- ROUTER
+
+
+taggedRouterSignal : Signal Actions.Action
+taggedRouterSignal =
+  Signal.map ApplyRoute router.signal
 
 
 -- START APP
 
-init : ( Players, Effects Action )
+init : ( Model, Effects Action )
 init =
-  ( initialPlayers, Players.Search.Effects.fetchAll )
+  (initialModel, Effects.none)
+  --( initialPlayers, Players.Search.Effects.fetchAll )
 
-app : StartApp.App Players
+
+app : StartApp.App Model
 app =
   StartApp.start
     { init = init
-    , inputs = []
+    , inputs = [taggedRouterSignal]
     , update = update
     , view = view
     }
