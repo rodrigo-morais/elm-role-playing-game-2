@@ -5,10 +5,10 @@ import Effects exposing (Effects)
 
 
 import Actions exposing (..)
-import Models exposing (..)
+import Router.Models exposing (..)
 
 
-update : Action -> Model -> (Model, Effects Action)
+update : Action -> RouteModel -> (RouteModel, Effects Action)
 update action model =
   case action of
     ApplyRoute ( route, location ) ->

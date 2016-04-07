@@ -7,10 +7,10 @@ import StartApp
 
 
 import Router.Routing exposing (..)
+import Router.Models exposing (..)
 
 
 import Actions exposing (..)
-import Models exposing (..)
 import View exposing (..)
 import Update exposing (..)
 
@@ -25,13 +25,13 @@ taggedRouterSignal =
 
 -- START APP
 
-init : ( Model, Effects Action )
+init : ( RouteModel, Effects Action )
 init =
-  (initialModel, Effects.none)
+  (initialRouteModel, Effects.none)
   --( initialPlayers, Players.Search.Effects.fetchAll )
 
 
-app : StartApp.App Model
+app : StartApp.App RouteModel
 app =
   StartApp.start
     { init = init

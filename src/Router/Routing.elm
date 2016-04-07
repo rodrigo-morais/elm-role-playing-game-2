@@ -4,11 +4,10 @@ module Router.Routing (..) where
 import Hop
 import Hop.Matchers exposing (match1, match2)
 import Hop.Navigate exposing (navigateTo)
-import Hop.Types exposing (Router, PathMatcher, Location)
+import Hop.Types exposing (Router, PathMatcher)
 
 
-type Route
-  = NotFoundRoute
+import Router.Models exposing (..)
 
 
 matchers : List (PathMatcher Route)

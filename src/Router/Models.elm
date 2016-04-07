@@ -1,19 +1,22 @@
-module Models (..) where
+module Router.Models (..) where
 
 
 import Hop.Types exposing (Location, newLocation)
-import Router.Routing exposing (..)
 
 
-type alias Model =
+type Route
+  = NotFoundRoute
+  
+
+type alias RouteModel =
   {
     location : Location
   , route : Route
   }
 
 
-initialModel : Model
-initialModel =
+initialRouteModel : RouteModel
+initialRouteModel =
   {
     location = newLocation
   , route = NotFoundRoute

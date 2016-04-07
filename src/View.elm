@@ -5,10 +5,10 @@ import Html exposing (..)
 
 
 import Actions exposing (..)
-import Models exposing (..)
+import Router.Models exposing (..)
 
 
-view : Signal.Address Action -> Model -> Html.Html
+view : Signal.Address Action -> RouteModel -> Html.Html
 view address model =
   div [ ]
       [ ]
