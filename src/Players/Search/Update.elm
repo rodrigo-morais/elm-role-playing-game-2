@@ -13,3 +13,11 @@ update action players =
   case action of
     NoOp ->
       (players, Effects.none)
+
+    FetchAllDone result ->
+      case result of
+        Ok return ->
+          (return, Effects.none)
+
+        Err error ->
+          (players, Effects.none)
