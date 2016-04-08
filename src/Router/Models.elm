@@ -6,6 +6,7 @@ import Hop.Types exposing (Location, newLocation)
 
 type Route
   = NotFoundRoute
+  | PlayersRoute
   
 
 type alias RouteModel =
@@ -19,5 +20,5 @@ initialRouteModel : RouteModel
 initialRouteModel =
   {
     location = newLocation
-  , route = NotFoundRoute
+  , route = PlayersRoute
   }

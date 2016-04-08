@@ -7,17 +7,28 @@ import StartApp
 
 
 import Router.Routing exposing (..)
+import Router.Actions exposing (..)
+
+
+import Models exposing (..)
+
+
+import Players.Search.Effects exposing (..)
 
 
 -- START APP
 
-init : ( RouteModel, Effects Action )
+init : ( AppModel, Effects Router.Routing.Action )
 init =
-  (initialRouteModel, Effects.none)
-  --( initialPlayers, Players.Search.Effects.fetchAll )
+  let
+    fxs = [ Effects.map PlayersSearchAction fetchAll ]
+    fx = Effects.batch fxs
+
+  in
+    (initialAppModel, fx)
 
 
-app : StartApp.App RouteModel
+app : StartApp.App AppModel
 app =
   StartApp.start
     { init = init

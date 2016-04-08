@@ -33,9 +33,21 @@ inputRouterSignal =
   Signal.map ApplyRoute router.signal
 
 
+indexMatcher : PathMatcher Route
+indexMatcher =
+  match1 PlayersRoute "/"
+
+
+playersMatcher : PathMatcher Route
+playersMatcher =
+  match1 PlayersRoute "/players"
+
+
 matchers : List (PathMatcher Route)
 matchers =
-  [ ]
+  [ indexMatcher
+  , playersMatcher
+  ]
 
 
 router : Router Route
