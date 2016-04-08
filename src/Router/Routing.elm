@@ -15,7 +15,8 @@ import Router.View exposing (..)
 
 type alias RouteModel = Router.Models.RouteModel
 type alias Route = Router.Models.Route
-initialRouteModel = initialRouteModel
+initialRouteModel : RouteModel
+initialRouteModel = Router.Models.initialRouteModel
 
 
 type alias Action = Router.Actions.Action
