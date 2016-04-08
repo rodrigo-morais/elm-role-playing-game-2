@@ -8,6 +8,28 @@ import Hop.Types exposing (Router, PathMatcher)
 
 
 import Router.Models exposing (..)
+import Router.Actions exposing (..)
+import Router.Update exposing (..)
+import Router.View exposing (..)
+
+
+type alias RouteModel = Router.Models.RouteModel
+type alias Route = Router.Models.Route
+initialRouteModel = initialRouteModel
+
+
+type alias Action = Router.Actions.Action
+
+
+view = Router.View.view
+
+
+update = Router.Update.update
+
+
+inputRouterSignal : Signal Action
+inputRouterSignal =
+  Signal.map ApplyRoute router.signal
 
 
 matchers : List (PathMatcher Route)

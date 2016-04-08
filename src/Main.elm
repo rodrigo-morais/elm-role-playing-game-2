@@ -7,20 +7,6 @@ import StartApp
 
 
 import Router.Routing exposing (..)
-import Router.Models exposing (..)
-
-
-import Actions exposing (..)
-import View exposing (..)
-import Update exposing (..)
-
-
--- ROUTER
-
-
-taggedRouterSignal : Signal Actions.Action
-taggedRouterSignal =
-  Signal.map ApplyRoute router.signal
 
 
 -- START APP
@@ -35,7 +21,7 @@ app : StartApp.App RouteModel
 app =
   StartApp.start
     { init = init
-    , inputs = [taggedRouterSignal]
+    , inputs = [inputRouterSignal]
     , update = update
     , view = view
     }

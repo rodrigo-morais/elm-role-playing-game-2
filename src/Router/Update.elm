@@ -1,10 +1,10 @@
-module Update (..) where
+module Router.Update (..) where
 
 
 import Effects exposing (Effects)
 
 
-import Actions exposing (..)
+import Router.Actions exposing (..)
 import Router.Models exposing (..)
 
 

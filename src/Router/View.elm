@@ -1,10 +1,10 @@
-module View (..) where
+module Router.View (..) where
 
 
 import Html exposing (..)
 
 
-import Actions exposing (..)
+import Router.Actions exposing (..)
 import Router.Models exposing (..)
 
 
