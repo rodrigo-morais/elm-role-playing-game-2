@@ -15,14 +15,20 @@ import Players.Search.Search as PlayersView
 import Players.Models exposing (..)
 
 
+import Navigation.View as Navigation
+
+
 view : Signal.Address Action -> AppModel -> Html.Html
 view address model =
-  case model.routeModel.route of
-    NotFoundRoute ->
-      notFoundView address model.routeModel
-  
-    PlayersRoute ->
-      playersView address model.players
+  div [ ]
+      [ Navigation.view
+      , case model.routeModel.route of
+          NotFoundRoute ->
+            notFoundView address model.routeModel
+
+          PlayersRoute ->
+            playersView address model.players
+      ]
 
 notFoundView : Signal.Address Action -> RouteModel -> Html.Html
 notFoundView address model =
